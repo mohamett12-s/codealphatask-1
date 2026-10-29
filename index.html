@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sawirro qurux badan oo la daawan karo." />
+  <title>Muuqaal | Image Gallery</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="./syle.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">URURINTA SAWIRRADA</p>
+      <h1>Muuqaal</h1>
+      <p class="intro">Meel yar oo lagu daawado quruxda dabiiciga, magaalooyinka, iyo xilliyada deggan.</p>
+    </header>
+
+    <section class="toolbar" aria-label="Xulashada qaybaha">
+      <div class="filters" role="group" aria-label="Qaybaha sawirrada">
+        <button class="filter is-active" data-filter="all">Dhammaan</button>
+        <button class="filter" data-filter="nature">Dabiici</button>
+        <button class="filter" data-filter="city">Magaalo</button>
+        <button class="filter" data-filter="water">Biyo</button>
+      </div>
+      <p id="photo-count" aria-live="polite">6 sawir</p>
+    </section>
+
+    <section class="gallery" aria-label="Image gallery">
+      <button class="gallery-card" data-category="nature" data-title="Buuro ceeryaamo leh" data-description="Subax deggan oo buuraha ka koraysa.">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Buuro ceeryaamo leh" />
+        <span class="card-info"><strong>Buuro</strong><small>Dabiici</small></span>
+      </button>
+      <button class="gallery-card" data-category="water" data-title="Xeebtii dahabka ahayd" data-description="Hirarka badda ee iftiinka galabnimo.">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85" alt="Xeeb iyo bad buluug ah" />
+        <span class="card-info"><strong>Xeeb</strong><small>Biyo</small></span>
+      </button>
+      <button class="gallery-card featured" data-category="city" data-title="Nalalka magaalada" data-description="Magaalo ifaysa marka habeenku soo dego.">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=85" alt="Magaalo habeenkii ifaysa" />
+        <span class="card-info"><strong>Nalal</strong><small>Magaalo</small></span>
+      </button>
+      <button class="gallery-card" data-category="nature" data-title="Kaynta deggan" data-description="Cagaar iyo hawo nadiif ah oo kaynta dhexdeeda ah.">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85" alt="Geedo kayn cagaaran" />
+        <span class="card-info"><strong>Kaynta</strong><small>Dabiici</small></span>
+      </button>
+      <button class="gallery-card" data-category="water" data-title="Harada muraayadda" data-description="Biyo xasilloon oo ka tarjuma buuraha.">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85" alt="Harada oo buuraha ka tarjumeeysa" />
+        <span class="card-info"><strong>Harada</strong><small>Biyo</small></span>
+      </button>
+      <button class="gallery-card" data-category="city" data-title="Waddada duugga ah" data-description="Waddo yar oo leh muuqaal magaalada dhexdeeda ah.">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=85" alt="Guryo ku yaal waddo deggan" />
+        <span class="card-info"><strong>Waddo</strong><small>Magaalo</small></span>
+      </button>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Sawirka oo weyn">
+    <button class="close" aria-label="Xir sawirka">×</button>
+    <button class="nav prev" aria-label="Sawirkii hore">←</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="" />
+      <figcaption><span id="lightbox-title"></span><small id="lightbox-description"></small></figcaption>
+    </figure>
+    <button class="nav next" aria-label="Sawirka xiga">→</button>
+  </dialog>
+
+ <script src="main.js"></script>
+</body>
+</html>
